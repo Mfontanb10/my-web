@@ -30,7 +30,8 @@ header {
 }
 
 .logo {
-  height: 50px;
+  height: 100px;
+  width: 100px;
 }
 
 .nav-links {
@@ -104,35 +105,6 @@ header {
   text-align: center;
 }
 
-form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-input, textarea {
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-button {
-  padding: 1rem;
-  background-color: #f06428;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-button:hover {
-  background-color: #d6521e;
-}
-
 footer {
   background-color: #f5f5f5;
   text-align: center;
@@ -141,9 +113,39 @@ footer {
   color: #777;
 }
 
+.bio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.bio-image img {
+  width: 375px;
+  height: 375px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bio-text {
+  max-width: 600px;
+}
+
+.bio-text h2 {
+  color: #f06428;
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 768px) {
   .service-boxes {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .bio-container {
+    flex-direction: row;
+    text-align: left;
   }
 }
