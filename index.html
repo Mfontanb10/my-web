@@ -7,6 +7,22 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Smooth scrolling behavior */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Adjust top padding of sections to avoid cutting off titles when clicking */
+    section {
+      padding-top: 100px; /* Adjust this value based on your header height */
+    }
+
+    /* Optional: Add a small buffer for the sections */
+    header + section {
+      scroll-margin-top: 100px; /* Ensures the section does not hide behind the header */
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -120,7 +136,9 @@
   <section id="contact" class="contact">
     <div class="container">
       <h2 data-en="Contact Us" data-es="Contáctanos">Contact Us</h2>
-      <p data-en="Let's get in touch! Feel free to send us an email at" data-es="¡Pongámonos en contacto! No dudes en enviarnos un correo electrónico a">Let's get in touch! Feel free to send us an email at <a href="mailto:marcos.fontanbalestra@yutoriglobal.com" data-en="marcos.fontanbalestra@yutoriglobal.com" data-es="marcos.fontanbalestra@yutoriglobal.com">marcos.fontanbalestra@yutoriglobal.com</a></p>
+      <p data-en="Let's get in touch! Feel free to send us an email at" data-es="¡Pongámonos en contacto! No dudes en enviarnos un correo electrónico a">
+        Let's get in touch! Feel free to send us an email at <a href="mailto:marcos.fontanbalestra@yutoriglobal.com" data-en="marcos.fontanbalestra@yutoriglobal.com" data-es="marcos.fontanbalestra@yutoriglobal.com">marcos.fontanbalestra@yutoriglobal.com</a>
+      </p>
     </div>
   </section>
 
@@ -147,13 +165,13 @@
     // Translate page content based on selected language
     function translatePage(language) {
       if (language === 'es') {
-        document.querySelectorAll('[data-es]').forEach(el => {
-          const enText = el.getAttribute('data-es');
+        document.querySelectorAll('[data-en]').forEach(el => {
+          const enText = el.getAttribute('data-en');
           el.innerText = enText;
         });
       } else {
-        document.querySelectorAll('[data-en]').forEach(el => {
-          const esText = el.getAttribute('data-en');
+        document.querySelectorAll('[data-es]').forEach(el => {
+          const esText = el.getAttribute('data-es');
           el.innerText = esText;
         });
       }
