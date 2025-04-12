@@ -44,27 +44,56 @@ header {
   font-weight: 600;
 }
 
+/* HERO SECTION UPDATED */
 .hero {
-  background-color: #f5f5f5;
+  background: linear-gradient(135deg, #f06428, #ffa06d);
+  color: white;
   padding: 4rem 0;
   text-align: center;
 }
 
 .hero h1 {
   font-size: 2.5rem;
-  color: #f06428;
   margin-bottom: 1rem;
 }
 
 .hero p {
   font-size: 1.2rem;
-  color: #555;
+  color: #fff;
 }
 
+.highlight {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.cta-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: white;
+  color: #f06428;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #f06428;
+  color: white;
+}
+
+/* SERVICES SECTION */
 .services {
   background-color: #ffffff;
   padding: 4rem 0;
   text-align: center;
+}
+
+.big-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .service-boxes {
@@ -98,6 +127,7 @@ header {
   margin-bottom: 1rem;
 }
 
+/* ABOUT SECTION */
 .about {
   background-color: #f5f5f5;
   padding: 4rem 0;
@@ -109,12 +139,14 @@ header {
   margin: 0 auto 1.5rem;
 }
 
+/* CONTACT */
 .contact {
   background-color: #ffffff;
   padding: 4rem 0;
   text-align: center;
 }
 
+/* FOOTER */
 footer {
   background-color: #f5f5f5;
   text-align: center;
@@ -123,6 +155,7 @@ footer {
   color: #777;
 }
 
+/* MARCOS BIO SECTION */
 .bio-container {
   display: flex;
   flex-direction: column;
@@ -148,6 +181,27 @@ footer {
   margin-bottom: 1rem;
 }
 
+/* CERTIFICATIONS SECTION */
+.certifications {
+  background-color: #f5f5f5;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.certs-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.certs-container img {
+  height: 100px;
+  object-fit: contain;
+}
+
+/* RESPONSIVE */
 @media (min-width: 768px) {
   .service-boxes {
     flex-direction: row;
