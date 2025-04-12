@@ -147,13 +147,13 @@
     // Translate page content based on selected language
     function translatePage(language) {
       if (language === 'es') {
-        document.querySelectorAll('[data-en]').forEach(el => {
-          const enText = el.getAttribute('data-en');
+        document.querySelectorAll('[data-es]').forEach(el => {
+          const enText = el.getAttribute('data-es');
           el.innerText = enText;
         });
       } else {
-        document.querySelectorAll('[data-es]').forEach(el => {
-          const esText = el.getAttribute('data-es');
+        document.querySelectorAll('[data-en]').forEach(el => {
+          const esText = el.getAttribute('data-en');
           el.innerText = esText;
         });
       }
