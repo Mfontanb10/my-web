@@ -114,5 +114,44 @@
       <p>&copy; 2025 Yutori Global. Todos los derechos reservados.</p>
     </div>
   </footer>
+  <script>
+    // Language switcher functionality
+    const languageButtons = document.querySelectorAll('.lang-btn');
+    const currentLang = localStorage.getItem('language') || 'en'; // Default to English
+
+    // Set initial language based on localStorage value
+    if (currentLang === 'es') {
+      document.documentElement.lang = 'es';
+      translatePage('es');
+    } else {
+      document.documentElement.lang = 'en';
+      translatePage('en');
+    }
+
+    // Translate page content based on selected language
+    function translatePage(language) {
+      if (language === 'es') {
+        document.querySelectorAll('[data-en]').forEach(el => {
+          const enText = el.getAttribute('data-en');
+          el.innerText = enText;
+        });
+      } else {
+        document.querySelectorAll('[data-es]').forEach(el => {
+          const esText = el.getAttribute('data-es');
+          el.innerText = esText;
+        });
+      }
+    }
+
+    // Language button click event
+    languageButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        const lang = e.target.id;
+        localStorage.setItem('language', lang);
+        document.documentElement.lang = lang;
+        translatePage(lang);
+      });
+    });
+  </script>
 </body>
 </html>
