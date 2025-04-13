@@ -243,6 +243,13 @@ html {
       padding-left: 2rem;
     }
   }
+  /* Mobile adjustment for Marcos Bio: smaller image */
+  @media (max-width: 767px) {
+    .bio-image img {
+      width: 200px;
+      height: 200px;
+    }
+  }
   
   /* Certifications Section */
   .certifications {
@@ -277,7 +284,7 @@ html {
     margin-left: 0.3rem;
     color: #f06428;
   }
-  /* Certifications images as cards with uniform sizing */
+  /* Certifications images as cards */
   .cert-images {
     display: flex;
     flex-wrap: wrap;
@@ -435,5 +442,12 @@ html {
     padding: 2rem 0;
     font-size: 0.9rem;
     color: #777;
+  }
+  
+  /* Reduce white space between sections on mobile by half */
+  @media (max-width: 767px) {
+    .hero, .services, .marcos-bio, .certifications, .projects, .about, .contact {
+      padding: 2rem 0;
+    }
   }
   

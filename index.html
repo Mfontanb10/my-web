@@ -46,14 +46,14 @@
          data-es="Desde la estrategia hasta la ejecución, te ayudamos a desbloquear todo el potencial de SFMC.">
         From strategy to execution, we help you unlock SFMC's full potential.
       </p>
-      <a href="mailto:marcos.fontanbalestra@yutoriglobal.com?subject=Hey%20Marcos%20Let's%20Talk" class="cta-btn" 
-         data-en="Let’s Talk" data-es="Hablemos">
+      <!-- "Let's Talk" now links to contact section -->
+      <a href="#contact" class="cta-btn" data-en="Let’s Talk" data-es="Hablemos">
         Let’s Talk
       </a>
     </div>
   </section>
 
-  <!-- SERVICES SECTION -->
+  <!-- SERVICES SECTION (2 services in one row on desktop) -->
   <section id="services" class="services">
     <div class="container">
       <h2 class="big-title" data-en="Our Services" data-es="Nuestros Servicios">Our Services</h2>
@@ -78,7 +78,7 @@
     </div>
   </section>
 
-  <!-- MEET MARCOS SECTION -->
+  <!-- MEET MARCOS SECTION (Two-column layout on desktop) -->
   <section class="marcos-bio">
     <div class="container bio-container">
       <div class="bio-image">
@@ -124,8 +124,9 @@
   <!-- PROJECTS CAROUSEL SECTION -->
   <section class="projects">
     <div class="container">
-      <h2 data-en="Over 50 Projects Delivered" data-es="Más de 50 Proyectos Realizados">
-        Over 50 Projects Delivered
+      <!-- Heading updated -->
+      <h2 data-en="+50 Projects Delivered" data-es="Más de 50 Proyectos Realizados">
+        +50 Projects Delivered
       </h2>
       <p data-en="Our team has a proven track record of contributing to projects for some of the world's biggest brands, demonstrating exceptional expertise and quality." 
          data-es="Nuestro equipo tiene un historial comprobado de contribuciones en proyectos de algunas de las marcas más reconocidas, demostrando una experiencia y calidad excepcionales.">
@@ -171,7 +172,7 @@
     </div>
   </section>
 
-  <!-- CONTACT SECTION WITH FORMS (Formspree Integration) -->
+  <!-- CONTACT SECTION WITH FORMSPREE -->
   <section id="contact" class="contact">
     <div class="container">
       <h2 data-en="Contact Us" data-es="Contáctanos">Contact Us</h2>
@@ -189,7 +190,7 @@
           <input type="text" name="company" placeholder="Company" required>
         </div>
         <div class="form-group">
-          <textarea name="message" placeholder="Your Message" required></textarea>
+          <textarea name="message" maxlength="200" placeholder="Hello I would like to schedule a free consultation call to discuss how you could help us improve our marketing strategy" required></textarea>
         </div>
         <button type="submit">Submit</button>
       </form>
