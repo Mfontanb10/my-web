@@ -63,6 +63,7 @@ body {
   padding: 2rem 0;
 }
 
+/* Header */
 header {
   background-color: #fff;
   border-bottom: 1px solid #eee;
@@ -77,27 +78,67 @@ header {
   align-items: center;
 }
 
+/* Adjust logo size on mobile */
 .logo {
   height: 150px;
   width: 150px;
 }
+@media (max-width: 767px) {
+  .logo {
+    height: 100px;
+    width: 100px;
+  }
+}
 
 /* Navigation */
+.nav {
+  flex: 1;
+}
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
 }
-
+.nav-links li {
+  position: relative;
+}
 .nav-links a {
   text-decoration: none;
   color: #333;
   font-weight: 600;
 }
-
 .nav-links a:hover {
   color: #f06428;
   text-decoration: underline;
+}
+
+/* Hamburger Menu - Hidden on desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .menu-toggle {
+    display: block;
+  }
+  /* Hide nav-links initially in mobile */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 1rem 0;
+    border-top: 1px solid #eee;
+  }
+  .nav-links.active {
+    display: flex;
+  }
 }
 
 /* Hero Section */
@@ -107,22 +148,18 @@ header {
   padding: 4rem 0;
   text-align: center;
 }
-
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
-
 .hero p {
   font-size: 1.2rem;
   color: #fff;
 }
-
 .highlight {
   color: #ffffff;
   font-weight: bold;
 }
-
 .cta-btn {
   display: inline-block;
   margin-top: 2rem;
@@ -134,7 +171,6 @@ header {
   text-decoration: none;
   transition: background 0.3s, color 0.3s;
 }
-
 .cta-btn:hover {
   background-color: #f06428;
   color: white;
@@ -146,12 +182,10 @@ header {
   padding: 4rem 0;
   text-align: center;
 }
-
 .big-title {
   font-size: 2.5rem;
   margin-bottom: 2rem;
 }
-
 .service-boxes {
   display: flex;
   flex-direction: column;
@@ -161,38 +195,32 @@ header {
   transform: translateY(20px);
   animation: fadeSlideUp 1s ease forwards;
 }
-
 @keyframes fadeSlideUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-
 .service {
   background: #f9f9f9;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .service:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-
 .service-icon {
   font-size: 3rem;
   color: #f06428;
   margin-bottom: 1rem;
 }
-
 .service h3 {
   color: #f06428;
   margin-bottom: 1rem;
 }
-
 /* On desktop: three columns for services */
 @media (min-width: 768px) {
   .service-boxes {
@@ -209,7 +237,6 @@ header {
 .marcos-bio {
   padding: 4rem 0;
 }
-
 .bio-container {
   display: flex;
   flex-direction: column;
@@ -217,19 +244,16 @@ header {
   text-align: center;
   gap: 2rem;
 }
-
 .bio-image img {
   width: 300px;
   height: 300px;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-
 .bio-text {
   max-width: 600px;
 }
-
 .bio-text h2 {
   color: #f06428;
   margin-bottom: 1rem;
@@ -241,49 +265,58 @@ header {
   padding: 2rem 0;
   text-align: center;
 }
-
 .certs-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-
+/* Reduce space between header and CSAT */
 .cert-header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem; /* Reduced gap */
 }
-
 .cert-header h2 {
   margin: 0;
   font-size: 1.8rem;
 }
-
 .csat {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
+  margin: 0; /* No extra margin */
 }
-
 .csat .stars {
-  margin-left: 0.5rem;
+  margin-left: 0.3rem;
   color: #f06428;
 }
-
-/* Force certifications images to uniform size */
+/* Certifications images to uniform size */
 .cert-images {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   gap: 1rem;
 }
-
 .cert-images img {
   height: 80px;
   object-fit: contain;
+  flex: 1 1 100px;
+}
+
+/* For mobile: Use grid layout with 2 columns for certifications */
+@media (max-width: 767px) {
+  .cert-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  /* Center the lone certification if odd number */
+  .cert-images img:nth-child(odd):last-child {
+    grid-column: 1 / span 2;
+    justify-self: center;
+  }
 }
 
 /* Projects Carousel Section */
@@ -292,43 +325,35 @@ header {
   padding: 4rem 0;
   text-align: center;
 }
-
 .projects h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
-
 .projects p {
   max-width: 800px;
   margin: 0 auto 2rem;
 }
-
 /* Logo Marquee */
 .logo-marquee {
   overflow: hidden;
   position: relative;
 }
-
 .logo-track {
   display: flex;
   align-items: center;
-  /* Duplicate logos make the animation seamless */
   width: max-content;
   animation: scrollLogo 20s linear infinite;
 }
-
 .logo-track img {
   margin: 0 1rem;
   height: 50px;
   object-fit: contain;
 }
-
 @keyframes scrollLogo {
   0% {
     transform: translateX(0);
   }
   100% {
-    /* Adjust this percentage based on total width of logos */
     transform: translateX(-50%);
   }
 }
@@ -347,28 +372,4 @@ footer {
   padding: 2rem 0;
   font-size: 0.9rem;
   color: #777;
-}
-
-/* Media Queries for Mobile */
-/* For mobile, make the carousel horizontally scrollable instead of animated */
-@media (max-width: 767px) {
-  .logo-track {
-    animation: none;
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-  .logo-track img {
-    margin: 0 0.5rem;
-    height: 40px;
-  }
-  .cert-header {
-    flex-direction: column;
-    text-align: center;
-  }
-  .csat {
-    margin-top: 0.5rem;
-  }
-  .cert-images {
-    flex-direction: column;
-  }
 }
