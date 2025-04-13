@@ -53,7 +53,7 @@
     </div>
   </section>
 
-  <!-- SERVICES SECTION (2 services in one row on desktop) -->
+  <!-- SERVICES SECTION -->
   <section id="services" class="services">
     <div class="container">
       <h2 class="big-title" data-en="Our Services" data-es="Nuestros Servicios">Our Services</h2>
@@ -78,7 +78,7 @@
     </div>
   </section>
 
-  <!-- MEET MARCOS SECTION (Two-column layout on desktop) -->
+  <!-- MEET MARCOS SECTION -->
   <section class="marcos-bio">
     <div class="container bio-container">
       <div class="bio-image">
@@ -124,7 +124,6 @@
   <!-- PROJECTS CAROUSEL SECTION -->
   <section class="projects">
     <div class="container">
-      <!-- Heading updated -->
       <h2 data-en="+50 Projects Delivered" data-es="Más de 50 Proyectos Realizados">
         +50 Projects Delivered
       </h2>
@@ -206,9 +205,17 @@
   <!-- Mobile Menu Toggle Script -->
   <script>
     const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
+    const navUl = document.querySelector(".nav-links");
     menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
+      navUl.classList.toggle("active");
+    });
+    
+    // Close the mobile menu when a nav link is clicked
+    const navLinks = document.querySelectorAll(".nav-links a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        navUl.classList.remove("active");
+      });
     });
   </script>
 </body>
