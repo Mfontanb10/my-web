@@ -4,7 +4,7 @@ html {
   scroll-padding-top: 150px;
 }
 
-/* New Language Dropdown Styling */
+/* Language Dropdown Styling */
 .language-dropdown {
   position: relative;
   display: inline-block;
@@ -224,6 +224,98 @@ header {
   margin: 0 auto 1.5rem;
 }
 
+/* Certifications Section */
+.certifications {
+  background-color: #f5f5f5;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.certs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cert-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.cert-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.csat {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.csat .stars {
+  margin-left: 0.5rem;
+  color: #f06428;
+}
+
+.cert-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Projects Section */
+.projects {
+  background-color: #ffffff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.projects p {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+/* Logo Marquee */
+.logo-marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-track {
+  display: flex;
+  align-items: center;
+  /* Duplicate logos make the animation seamless */
+  width: max-content;
+  animation: scrollLogo 20s linear infinite;
+}
+
+.logo-track img {
+  margin: 0 1rem;
+  height: 50px;
+  object-fit: contain;
+}
+
+@keyframes scrollLogo {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Adjust percentage based on total width of logos */
+    transform: translateX(-50%);
+  }
+}
+
 /* Contact Section */
 .contact {
   background-color: #ffffff;
@@ -266,48 +358,29 @@ footer {
   margin-bottom: 1rem;
 }
 
-/* Certifications Section */
-.certifications {
-  background-color: #f5f5f5;
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.certs-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
-
-.certs-container img {
-  height: 100px;
-  object-fit: contain;
-}
-
 /* Media Queries for Responsiveness */
+@media (max-width: 767px) {
+  .cert-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .csat {
+    margin-top: 0.5rem;
+  }
+  .cert-images {
+    flex-direction: column;
+  }
+  .logo-track {
+    animation-duration: 40s;
+  }
+  .logo-track img {
+    margin: 0 0.5rem;
+    height: 40px;
+  }
+}
+
 @media (min-width: 768px) {
-  .service-boxes {
+  .cert-images {
     flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .bio-container {
-    flex-direction: row;
-    text-align: left;
-    align-items: flex-start;
-  }
-
-  .bio-text {
-    text-align: left;
-  }
-
-  .about-grid {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .about-block {
-    flex: 1;
   }
 }
