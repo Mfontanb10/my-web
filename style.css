@@ -1,3 +1,9 @@
+/* Smooth scrolling and offset for anchored sections due to fixed header */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
+}
+
 /* Language Switcher Styling */
 .language-switcher {
   display: flex;
