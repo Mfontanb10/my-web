@@ -11,7 +11,7 @@
 <body>
   <header>
     <div class="container header-container">
-      <img src="assets/Yutori-Global-Logo.png" alt="Yutori-Global-Logo" class="logo" />
+      <img src="assets/Yutori-Global-Logo.png" alt="Yutori Global Logo" class="logo" />
       <nav>
         <ul class="nav-links">
           <li><a href="#home" data-en="Home" data-es="Inicio">Home</a></li>
@@ -20,10 +20,13 @@
           <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
         </ul>
       </nav>
-      <!-- Language Switcher -->
-      <div class="language-switcher">
-        <button id="en" class="lang-btn" data-en="English" data-es="Inglés">English</button>
-        <button id="es" class="lang-btn" data-en="Español" data-es="Spanish">Español</button>
+      <!-- Language Dropdown -->
+      <div class="language-dropdown">
+        <button class="dropdown-toggle">EN</button>
+        <div class="dropdown-menu">
+          <a href="index.html" data-lang="en">English</a>
+          <a href="index-es.html" data-lang="es">Español</a>
+        </div>
       </div>
     </div>
   </header>
@@ -38,7 +41,7 @@
         From strategy to execution, we help you unlock SFMC's full potential.
       </p>
       <a
-        href="mailto:marcos.fontanbalestra@yutoriglobal.com?subject=Hey%20Marcos%20Let's%20Talk%20-%20[Replace%20with%20Company%20Name]&body=Hello%20Marcos,%0A%0AI%20am%20interested%20in%20scheduling%20a%20call%20to%20discuss%20how%20you%20can%20help%20us%20improve%20our%20SFMC%20implementation%20and%20strategy.%0A%0ARegards,%0A[Insert%20Your%20Name%20and%20Company%20Name]"
+        href="mailto:marcos.fontanbalestra@yutoriglobal.com?subject=Hey%20Marcos%20Let's%20Talk"
         class="cta-btn"
         data-en="Let’s Talk" data-es="Hablemos"
       >Let’s Talk</a>
@@ -83,6 +86,7 @@
 
   <section class="certifications">
     <div class="container certs-container">
+      <h2 data-en="Our Team is Certified" data-es="Nuestro equipo está certificado">Our Team is Certified</h2>
       <img src="assets/SFMC Email Specialist.png" alt="Email Specialist" />
       <img src="assets/SFMC Consultant.png" alt="Consultant" />
       <img src="assets/SFMC Administrator.png" alt="Administrator" />
@@ -120,7 +124,7 @@
   <section id="contact" class="contact">
     <div class="container">
       <h2 data-en="Contact Us" data-es="Contáctanos">Contact Us</h2>
-      <p data-en="Let's get in touch! Feel free to send us an email at" data-es="¡Pongámonos en contacto! No dudes en enviarnos un correo electrónico a">
+      <p data-en="Let's get in touch! Feel free to send us an email at marcos.fontanbalestra@yutoriglobal.com" data-es="¡Pongámonos en contacto! No dudes en enviarnos un correo electrónico a marcos.fontanbalestra@yutoriglobal.com">
         Let's get in touch! Feel free to send us an email at <a href="mailto:marcos.fontanbalestra@yutoriglobal.com" data-en="marcos.fontanbalestra@yutoriglobal.com" data-es="marcos.fontanbalestra@yutoriglobal.com">marcos.fontanbalestra@yutoriglobal.com</a>
       </p>
     </div>
@@ -131,45 +135,5 @@
       <p>&copy; 2025 Yutori Global. All rights reserved.</p>
     </div>
   </footer>
-
-  <script>
-    // Language switcher functionality
-    const languageButtons = document.querySelectorAll('.lang-btn');
-    const currentLang = localStorage.getItem('language') || 'en'; // Default to English
-
-    // Set initial language based on localStorage value
-    if (currentLang === 'es') {
-      document.documentElement.lang = 'es';
-      translatePage('es');
-    } else {
-      document.documentElement.lang = 'en';
-      translatePage('en');
-    }
-
-    // Translate page content based on selected language
-    function translatePage(language) {
-      if (language === 'es') {
-        document.querySelectorAll('[data-en]').forEach(el => {
-          const enText = el.getAttribute('data-en');
-          el.innerText = enText;
-        });
-      } else {
-        document.querySelectorAll('[data-es]').forEach(el => {
-          const esText = el.getAttribute('data-es');
-          el.innerText = esText;
-        });
-      }
-    }
-
-    // Language button click event
-    languageButtons.forEach(button => {
-      button.addEventListener('click', (e) => {
-        const lang = e.target.id;
-        localStorage.setItem('language', lang);
-        document.documentElement.lang = lang;
-        translatePage(lang);
-      });
-    });
-  </script>
 </body>
 </html>

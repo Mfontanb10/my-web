@@ -11,7 +11,7 @@
 <body>
   <header>
     <div class="container header-container">
-      <img src="assets/Yutori-Global-Logo.png" alt="Yutori-Global-Logo" class="logo" />
+      <img src="assets/Yutori-Global-Logo.png" alt="Yutori Global Logo" class="logo" />
       <nav>
         <ul class="nav-links">
           <li><a href="#home" data-en="Home" data-es="Inicio">Inicio</a></li>
@@ -20,10 +20,13 @@
           <li><a href="#contact" data-en="Contact" data-es="Contacto">Contacto</a></li>
         </ul>
       </nav>
-      <!-- Language Switcher -->
-      <div class="language-switcher">
-        <button id="en" class="lang-btn" data-en="English" data-es="Inglés">Inglés</button>
-        <button id="es" class="lang-btn" data-en="Español" data-es="Spanish">Español</button>
+      <!-- Language Dropdown -->
+      <div class="language-dropdown">
+        <button class="dropdown-toggle">ES</button>
+        <div class="dropdown-menu">
+          <a href="index.html" data-lang="en">Inglés</a>
+          <a href="index-es.html" data-lang="es">Español</a>
+        </div>
       </div>
     </div>
   </header>
@@ -38,7 +41,7 @@
         Desde la estrategia hasta la ejecución, te ayudamos a desbloquear todo el potencial de SFMC.
       </p>
       <a
-        href="mailto:marcos.fontanbalestra@yutoriglobal.com?subject=Hey%20Marcos%20Let's%20Talk%20-%20[Replace%20with%20Company%20Name]&body=Hola%20Marcos,%0A%0A%20Estoy%20interesado%20en%20agendar%20una%20llamada%20para%20discutir%20cómo%20nos%20puedes%20ayudar%20a%20mejorar%20nuestra%20implementación%20y%20estrategia%20de%20SFMC.%0A%0A%20Saludos,%0A[Inserta%20tu%20nombre%20y%20nombre%20de%20la%20empresa]"
+        href="mailto:marcos.fontanbalestra@yutoriglobal.com?subject=Hey%20Marcos%20Let's%20Talk"
         class="cta-btn"
         data-en="Let’s Talk" data-es="Hablemos"
       >Hablemos</a>
@@ -83,6 +86,7 @@
 
   <section class="certifications">
     <div class="container certs-container">
+      <h2 data-en="Our Team is Certified" data-es="Nuestro equipo está certificado">Nuestro equipo está certificado</h2>
       <img src="assets/SFMC Email Specialist.png" alt="Email Specialist" />
       <img src="assets/SFMC Consultant.png" alt="Consultant" />
       <img src="assets/SFMC Administrator.png" alt="Administrator" />
@@ -91,36 +95,10 @@
     </div>
   </section>
 
-  <section id="about" class="about">
-    <div class="container">
-      <h2 data-en="About Yutori Global" data-es="Sobre Yutori Global">Sobre Yutori Global</h2>
-      <div class="about-grid">
-        <div class="about-block">
-          <h3 data-en="Strategy to Execution" data-es="Estrategia a Ejecución">Estrategia a Ejecución</h3>
-          <p data-en="Yutori Global provides expert Salesforce Marketing Cloud solutions, guiding businesses from strategy to execution with flexibility and precision." data-es="Yutori Global proporciona soluciones expertas en Salesforce Marketing Cloud, guiando a las empresas desde la estrategia hasta la ejecución con flexibilidad y precisión.">
-            Yutori Global proporciona soluciones expertas en Salesforce Marketing Cloud, guiando a las empresas desde la estrategia hasta la ejecución con flexibilidad y precisión.
-          </p>
-        </div>
-        <div class="about-block">
-          <h3 data-en="Hands-on Experience" data-es="Experiencia Práctica">Experiencia Práctica</h3>
-          <p data-en="Backed by several years of hands-on experience in both retail and consultancy sectors, our team deeply understands how to design and implement marketing strategies that drive real revenue impact." data-es="Respaldados por varios años de experiencia práctica tanto en el sector minorista como en el de consultoría, nuestro equipo entiende profundamente cómo diseñar e implementar estrategias de marketing que generen un impacto real en los ingresos.">
-            Respaldados por varios años de experiencia práctica tanto en el sector minorista como en el de consultoría, nuestro equipo entiende profundamente cómo diseñar e implementar estrategias de marketing que generen un impacto real en los ingresos.
-          </p>
-        </div>
-        <div class="about-block">
-          <h3 data-en="Results-Driven Approach" data-es="Enfoque Orientado a Resultados">Enfoque Orientado a Resultados</h3>
-          <p data-en="We help you unlock the full potential of SFMC to create smarter, more effective customer journeys that truly drive measurable growth." data-es="Te ayudamos a desbloquear todo el potencial de SFMC para crear recorridos de clientes más inteligentes y efectivos que realmente impulsen un crecimiento medible.">
-            Te ayudamos a desbloquear todo el potencial de SFMC para crear recorridos de clientes más inteligentes y efectivos que realmente impulsen un crecimiento medible.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="contact" class="contact">
     <div class="container">
       <h2 data-en="Contact Us" data-es="Contáctanos">Contáctanos</h2>
-      <p data-en="Let's get in touch! Feel free to send us an email at" data-es="¡Pongámonos en contacto! No dudes en enviarnos un correo electrónico a">
+      <p data-en="Let's get in touch! Feel free to send us an email at marcos.fontanbalestra@yutoriglobal.com" data-es="¡Pongámonos en contacto! No dudes en enviarnos un correo electrónico a marcos.fontanbalestra@yutoriglobal.com">
         ¡Pongámonos en contacto! No dudes en enviarnos un correo electrónico a <a href="mailto:marcos.fontanbalestra@yutoriglobal.com" data-en="marcos.fontanbalestra@yutoriglobal.com" data-es="marcos.fontanbalestra@yutoriglobal.com">marcos.fontanbalestra@yutoriglobal.com</a>
       </p>
     </div>
@@ -131,45 +109,5 @@
       <p>&copy; 2025 Yutori Global. Todos los derechos reservados.</p>
     </div>
   </footer>
-
-  <script>
-    // Language switcher functionality
-    const languageButtons = document.querySelectorAll('.lang-btn');
-    const currentLang = localStorage.getItem('language') || 'en'; // Default to English
-
-    // Set initial language based on localStorage value
-    if (currentLang === 'es') {
-      document.documentElement.lang = 'es';
-      translatePage('es');
-    } else {
-      document.documentElement.lang = 'en';
-      translatePage('en');
-    }
-
-    // Translate page content based on selected language
-    function translatePage(language) {
-      if (language === 'en') {
-        document.querySelectorAll('[data-es]').forEach(el => {
-          const esText = el.getAttribute('data-es');
-          el.innerText = esText;
-        });
-      } else {
-        document.querySelectorAll('[data-en]').forEach(el => {
-          const enText = el.getAttribute('data-en');
-          el.innerText = enText;
-        });
-      }
-    }
-
-    // Language button click event
-    languageButtons.forEach(button => {
-      button.addEventListener('click', (e) => {
-        const lang = e.target.id;
-        localStorage.setItem('language', lang);
-        document.documentElement.lang = lang;
-        translatePage(lang);
-      });
-    });
-  </script>
 </body>
 </html>

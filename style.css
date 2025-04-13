@@ -1,57 +1,50 @@
-/* Smooth scrolling and offset for anchored sections due to fixed header */
+/* Smooth scrolling and offset for fixed header */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 150px;
 }
 
-/* Language Switcher Styling */
-.language-switcher {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  position: absolute;
-  top: 10px;
-  right: 10px;
+/* New Language Dropdown Styling */
+.language-dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.lang-btn {
+.language-dropdown .dropdown-toggle {
   padding: 10px 20px;
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
-  background-color: #f06428;  /* Matching primary color */
+  background-color: #f06428;
   border: 2px solid #f06428;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  text-transform: capitalize;
 }
 
-.lang-btn:hover {
-  background-color: white;
-  color: #f06428;
+.language-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
-.lang-btn:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+.language-dropdown .dropdown-menu a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
 }
 
-.language-switcher button:first-child {
-  margin-right: auto;  /* Ensure English is always on the left */
+.language-dropdown .dropdown-menu a:hover {
+  background-color: #f06428;
+  color: #fff;
 }
 
-.language-switcher button:last-child {
-  margin-left: auto;  /* Ensure Spanish is always on the right */
-}
-
-/* Ensure we still handle RTL for Arabic */
-html[lang="ar"] .language-switcher {
-  flex-direction: row-reverse;
-}
-
-html[lang="en"], html[lang="es"] {
-  direction: ltr;
+.language-dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 /* General Styles */
@@ -89,6 +82,7 @@ header {
   width: 150px;
 }
 
+/* Navigation */
 .nav-links {
   list-style: none;
   display: flex;
@@ -101,6 +95,12 @@ header {
   font-weight: 600;
 }
 
+.nav-links a:hover {
+  color: #f06428;
+  text-decoration: underline;
+}
+
+/* Hero Section */
 .hero {
   background: linear-gradient(135deg, #f06428, #ffa06d);
   color: white;
@@ -140,6 +140,7 @@ header {
   color: white;
 }
 
+/* Services Section */
 .services {
   background-color: #ffffff;
   padding: 4rem 0;
@@ -192,6 +193,7 @@ header {
   margin-bottom: 1rem;
 }
 
+/* About Section */
 .about {
   background-color: #f5f5f5;
   padding: 4rem 0;
@@ -222,12 +224,14 @@ header {
   margin: 0 auto 1.5rem;
 }
 
+/* Contact Section */
 .contact {
   background-color: #ffffff;
   padding: 4rem 0;
   text-align: center;
 }
 
+/* Footer */
 footer {
   background-color: #f5f5f5;
   text-align: center;
@@ -236,6 +240,7 @@ footer {
   color: #777;
 }
 
+/* Bio Section */
 .bio-container {
   display: flex;
   flex-direction: column;
@@ -261,6 +266,7 @@ footer {
   margin-bottom: 1rem;
 }
 
+/* Certifications Section */
 .certifications {
   background-color: #f5f5f5;
   padding: 2rem 0;
@@ -269,10 +275,9 @@ footer {
 
 .certs-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  flex-wrap: wrap;
 }
 
 .certs-container img {
@@ -280,6 +285,7 @@ footer {
   object-fit: contain;
 }
 
+/* Media Queries for Responsiveness */
 @media (min-width: 768px) {
   .service-boxes {
     flex-direction: row;
