@@ -193,35 +193,46 @@ header {
   margin-bottom: 1rem;
 }
 
-/* About Section */
-.about {
-  background-color: #f5f5f5;
-  padding: 4rem 0;
-  text-align: center;
+/* On desktop: three columns for services */
+@media (min-width: 768px) {
+  .service-boxes {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .service {
+    flex-basis: calc(33.333% - 1rem);
+  }
 }
 
-.about-grid {
+/* Bio Section */
+.marcos-bio {
+  padding: 4rem 0;
+}
+
+.bio-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 2rem;
-  margin-top: 2rem;
 }
 
-.about-block {
-  background: white;
-  padding: 2rem;
+.bio-image img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.about-block h3 {
+.bio-text {
+  max-width: 600px;
+}
+
+.bio-text h2 {
   color: #f06428;
   margin-bottom: 1rem;
-}
-
-.about p {
-  max-width: 800px;
-  margin: 0 auto 1.5rem;
 }
 
 /* Certifications Section */
@@ -261,6 +272,7 @@ header {
   color: #f06428;
 }
 
+/* Force certifications images to uniform size */
 .cert-images {
   display: flex;
   flex-direction: row;
@@ -269,7 +281,12 @@ header {
   gap: 1rem;
 }
 
-/* Projects Section */
+.cert-images img {
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Projects Carousel Section */
 .projects {
   background-color: #ffffff;
   padding: 4rem 0;
@@ -311,7 +328,7 @@ header {
     transform: translateX(0);
   }
   100% {
-    /* Adjust percentage based on total width of logos */
+    /* Adjust this percentage based on total width of logos */
     transform: translateX(-50%);
   }
 }
@@ -332,34 +349,18 @@ footer {
   color: #777;
 }
 
-/* Bio Section */
-.bio-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 2rem;
-}
-
-.bio-image img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.bio-text {
-  max-width: 600px;
-}
-
-.bio-text h2 {
-  color: #f06428;
-  margin-bottom: 1rem;
-}
-
-/* Media Queries for Responsiveness */
+/* Media Queries for Mobile */
+/* For mobile, make the carousel horizontally scrollable instead of animated */
 @media (max-width: 767px) {
+  .logo-track {
+    animation: none;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .logo-track img {
+    margin: 0 0.5rem;
+    height: 40px;
+  }
   .cert-header {
     flex-direction: column;
     text-align: center;
@@ -369,18 +370,5 @@ footer {
   }
   .cert-images {
     flex-direction: column;
-  }
-  .logo-track {
-    animation-duration: 40s;
-  }
-  .logo-track img {
-    margin: 0 0.5rem;
-    height: 40px;
-  }
-}
-
-@media (min-width: 768px) {
-  .cert-images {
-    flex-direction: row;
   }
 }
