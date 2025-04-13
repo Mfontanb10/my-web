@@ -53,7 +53,7 @@
     </div>
   </section>
 
-  <!-- SERVICES SECTION (Desktop: 2 columns in one row) -->
+  <!-- SERVICES SECTION -->
   <section id="services" class="services">
     <div class="container">
       <h2 class="big-title" data-en="Our Services" data-es="Nuestros Servicios">Our Services</h2>
@@ -78,7 +78,7 @@
     </div>
   </section>
 
-  <!-- MEET MARCOS SECTION (Two-column layout on desktop) -->
+  <!-- MEET MARCOS SECTION -->
   <section class="marcos-bio">
     <div class="container bio-container">
       <div class="bio-image">
@@ -171,45 +171,28 @@
     </div>
   </section>
 
-  <!-- ABOUT SECTION (Styled as cards in three columns on desktop) -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2 data-en="About Yutori Global" data-es="Sobre Yutori Global">About Yutori Global</h2>
-      <div class="about-grid">
-        <div class="about-block">
-          <h3 data-en="Strategy to Execution" data-es="Estrategia a Ejecución">Strategy to Execution</h3>
-          <p data-en="Yutori Global provides expert Salesforce Marketing Cloud solutions, guiding businesses from strategy to execution with flexibility and precision." 
-             data-es="Yutori Global proporciona soluciones expertas en Salesforce Marketing Cloud, guiando a las empresas desde la estrategia hasta la ejecución con flexibilidad y precisión.">
-            Yutori Global provides expert Salesforce Marketing Cloud solutions, guiding businesses from strategy to execution with flexibility and precision.
-          </p>
-        </div>
-        <div class="about-block">
-          <h3 data-en="Hands-on Experience" data-es="Experiencia Práctica">Hands-on Experience</h3>
-          <p data-en="Backed by several years of hands-on experience, our team deeply understands how to design and implement marketing strategies that drive real revenue impact." 
-             data-es="Respaldados por varios años de experiencia práctica, nuestro equipo entiende profundamente cómo diseñar e implementar estrategias de marketing que generen un impacto real.">
-            Backed by several years of hands-on experience, our team deeply understands how to design and implement marketing strategies that drive real revenue impact.
-          </p>
-        </div>
-        <div class="about-block">
-          <h3 data-en="Results-Driven Approach" data-es="Enfoque Orientado a Resultados">Results-Driven Approach</h3>
-          <p data-en="We help you unlock the full potential of SFMC to create smarter, more effective customer journeys that truly drive measurable growth." 
-             data-es="Te ayudamos a desbloquear todo el potencial de SFMC para crear recorridos de clientes más inteligentes y efectivos que impulsen un crecimiento medible.">
-            We help you unlock the full potential of SFMC to create smarter, more effective customer journeys that truly drive measurable growth.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
+  <!-- CONTACT SECTION WITH FORMS (Formspree Integration) -->
   <section id="contact" class="contact">
     <div class="container">
       <h2 data-en="Contact Us" data-es="Contáctanos">Contact Us</h2>
-      <p data-en="Let's get in touch! Feel free to send us an email at marcos.fontanbalestra@yutoriglobal.com" 
-         data-es="¡Pongámonos en contacto! No dudes en enviarnos un correo electrónico a marcos.fontanbalestra@yutoriglobal.com">
-        Let's get in touch! Feel free to send us an email at <a href="mailto:marcos.fontanbalestra@yutoriglobal.com" 
-           data-en="marcos.fontanbalestra@yutoriglobal.com" data-es="marcos.fontanbalestra@yutoriglobal.com">marcos.fontanbalestra@yutoriglobal.com</a>
-      </p>
+      <form action="https://formspree.io/f/xgvadqjg" method="POST" class="contact-form">
+        <div class="form-group">
+          <input type="text" name="first_name" placeholder="First Name" required>
+        </div>
+        <div class="form-group">
+          <input type="text" name="last_name" placeholder="Last Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+          <input type="text" name="company" placeholder="Company" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
     </div>
   </section>
 

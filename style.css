@@ -160,7 +160,6 @@ html {
   }
   
   /* Services Section */
-  /* On mobile, stacked; on desktop, two columns */
   .services {
     background: #fff;
     padding: 4rem 0;
@@ -205,7 +204,7 @@ html {
     color: #f06428;
     margin-bottom: 1rem;
   }
-  /* Desktop: two columns for services */
+  /* Desktop: two-column layout for services */
   @media (min-width: 768px) {
     .service-boxes {
       flex-direction: row;
@@ -278,7 +277,7 @@ html {
     margin-left: 0.3rem;
     color: #f06428;
   }
-  /* Certifications images styled as cards */
+  /* Certifications images as cards with uniform sizing */
   .cert-images {
     display: flex;
     flex-wrap: wrap;
@@ -290,7 +289,7 @@ html {
     object-fit: contain;
     flex: 1 1 100px;
   }
-  /* On mobile: grid layout with 2 columns for certifications */
+  /* Mobile: grid layout with 2 columns for certifications */
   @media (max-width: 767px) {
     .cert-images {
       display: grid;
@@ -342,7 +341,7 @@ html {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
   }
-  /* Keep carousel animation active on mobile */
+  /* Ensure carousel animation stays active on mobile */
   @media (max-width: 767px) {
     .logo-track {
       animation-duration: 20s;
@@ -353,7 +352,7 @@ html {
     }
   }
   
-  /* About Section (Cards styled, three columns on desktop) */
+  /* About Section (Styled as cards, three columns on desktop) */
   .about {
     background: #f5f5f5;
     padding: 4rem 0;
@@ -388,11 +387,45 @@ html {
     }
   }
   
-  /* Contact Section */
+  /* Contact Section (Form styling) */
   .contact {
     background: #fff;
     padding: 4rem 0;
     text-align: center;
+  }
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+  }
+  .contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  .contact-form button {
+    padding: 0.75rem;
+    background-color: #f06428;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .contact-form button:hover {
+    background-color: #d9501c;
   }
   
   /* Footer */
