@@ -25,7 +25,7 @@ html {
     right: 0;
     background-color: #fff;
     min-width: 120px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     z-index: 1000;
   }
   .language-dropdown .dropdown-menu a {
@@ -141,11 +141,24 @@ html {
   .hero p {
     font-size: 1.2rem;
   }
-  .highlight {
-    font-weight: bold;
+  .hero-text.mobile {
+    display: none;
+  }
+  @media (max-width: 767px) {
+    .hero-text.desktop {
+      display: none;
+    }
+    .hero-text.mobile {
+      display: inline;
+      font-size: 2rem;
+    }
+    /* Additional break before CTA on mobile */
+    .mobile-only {
+      display: block;
+    }
   }
   .cta-btn {
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 1rem 2rem;
     background: #fff;
     color: #f06428;
@@ -204,7 +217,7 @@ html {
     color: #f06428;
     margin-bottom: 1rem;
   }
-  /* Desktop: two-column layout for services */
+  /* Desktop: three-column layout for services */
   @media (min-width: 768px) {
     .service-boxes {
       flex-direction: row;
@@ -262,12 +275,12 @@ html {
     flex-direction: column;
     gap: 1rem;
   }
-  /* Increase desktop gap between title and CSAT to 0.6cm (updated to 3x that gap) */
+  /* Increase desktop gap between title and CSAT to 1.8cm */
   .cert-header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.8cm; /* 0.6cm x 3 */
+    gap: 1.8cm;
     margin-bottom: 0.5rem;
   }
   .cert-header h2 {
@@ -303,7 +316,6 @@ html {
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
     }
-    /* Center lone image if odd number */
     .cert-images img:nth-child(odd):last-child {
       grid-column: 1 / span 2;
       justify-self: center;
@@ -348,7 +360,6 @@ html {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
   }
-  /* Ensure carousel animation stays active on mobile */
   @media (max-width: 767px) {
     .logo-track {
       animation-duration: 20s;
@@ -359,7 +370,7 @@ html {
     }
   }
   
-  /* About Section (Styled as cards, three columns on desktop) */
+  /* About Section (Cards styled, three columns on desktop) */
   .about {
     background: #f5f5f5;
     padding: 4rem 0;
