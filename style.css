@@ -161,10 +161,16 @@ html {
   .hero p {
     font-size: 1.2rem;
   }
-  /* Mobile hero tagline: add a break to tighten spacing */
+  /* Mobile Hero Tagline: Use tighter line-height and a specific break rule */
   .hero-text.mobile {
     display: none;
-    line-height: 1.1;
+    font-size: 2rem;
+    line-height: 1; /* Reduced line-height */
+  }
+  .mobile-break {
+    display: block;
+    margin: 0;
+    line-height: 0.8; /* Extra reduced gap */
   }
   @media (max-width: 767px) {
     .hero-text.desktop {
@@ -172,7 +178,6 @@ html {
     }
     .hero-text.mobile {
       display: inline;
-      font-size: 2rem;
     }
     .mobile-only {
       display: block;
@@ -483,10 +488,6 @@ html {
     color: #f06428;
   }
   @media (max-width: 767px) {
-    /* On mobile, ensure an extra break between rights and Follow us */
-    .footer-container p {
-      text-align: center;
-    }
     .footer-container .follow-us {
       display: block;
       margin-top: 0.5rem;
