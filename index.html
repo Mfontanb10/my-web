@@ -13,13 +13,11 @@
 <body>
   <header>
     <div class="container header-container">
-      <!-- Wrap logo so that clicking takes user to Home -->
+      <!-- Clicking on the logo scrolls to Home -->
       <a href="#home">
         <img src="assets/Yutori-Global-Logo.png" alt="Yutori Global Logo" class="logo" />
       </a>
       <nav class="nav">
-        <!-- Mobile close button for menu overlay; visible only on mobile -->
-        <span class="nav-close">&times;</span>
         <ul class="nav-links">
           <li><a href="#home" data-en="Home" data-es="Inicio">Home</a></li>
           <li><a href="#services" data-en="Services" data-es="Servicios">Services</a></li>
@@ -27,7 +25,7 @@
           <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
         </ul>
       </nav>
-      <!-- Hamburger Menu Toggle (visible in mobile) -->
+      <!-- Hamburger Menu Toggle (visible on mobile) -->
       <button class="menu-toggle"><i class="fas fa-bars"></i></button>
       <!-- Language Dropdown -->
       <div class="language-dropdown">
@@ -48,7 +46,7 @@
         <span class="hero-text desktop">
           Smarter Marketing Journeys with <span class="highlight" data-en="Salesforce Marketing Cloud" data-es="Salesforce Marketing Cloud">Salesforce Marketing Cloud</span>
         </span>
-        <!-- Mobile tagline with adjusted line-height -->
+        <!-- Mobile tagline with tighter spacing -->
         <span class="hero-text mobile">
           Smarter Experiences with SFMC
         </span>
@@ -56,9 +54,8 @@
       <p data-en="From strategy to execution, we help you unlock SFMC's full potential." data-es="Desde la estrategia hasta la ejecución, te ayudamos a desbloquear todo el potencial de SFMC.">
         From strategy to execution, we help you unlock SFMC's full potential.
       </p>
-      <!-- Mobile break for CTA -->
       <br class="mobile-only">
-      <!-- "Let's Talk" scrolls to Contact -->
+      <!-- "Let's Talk" scrolls to Contact section -->
       <a href="#contact" class="cta-btn" data-en="Let’s Talk" data-es="Hablemos">
         Let’s Talk
       </a>
@@ -73,24 +70,21 @@
         <div class="service">
           <i class="fas fa-lightbulb service-icon"></i>
           <h3 data-en="SFMC Consulting" data-es="Consultoría SFMC">SFMC Consulting</h3>
-          <p data-en="Strategic advice on implementation, product selection, integrations, and customer journey design." 
-             data-es="Asesoría estratégica en implementación, selección de productos, integraciones y diseño de recorridos del cliente.">
+          <p data-en="Strategic advice on implementation, product selection, integrations, and customer journey design." data-es="Asesoría estratégica en implementación, selección de productos, integraciones y diseño de recorridos del cliente.">
             Strategic advice on implementation, product selection, integrations, and customer journey design.
           </p>
         </div>
         <div class="service">
           <i class="fas fa-tools service-icon"></i>
           <h3 data-en="Hands-on Implementation" data-es="Implementación Práctica">Hands-on Implementation</h3>
-          <p data-en="Journey building, email development, AMPscript, data modeling, and marketing automation setup." 
-             data-es="Construcción de recorridos, desarrollo de correos electrónicos, AMPscript, modelado de datos y configuración de automatización de marketing.">
+          <p data-en="Journey building, email development, AMPscript, data modeling, and marketing automation setup." data-es="Construcción de recorridos, desarrollo de correos electrónicos, AMPscript, modelado de datos y configuración de automatización de marketing.">
             Journey building, email development, AMPscript, data modeling, and marketing automation setup.
           </p>
         </div>
         <div class="service">
           <i class="fas fa-chalkboard-teacher service-icon"></i>
           <h3 data-en="SFMC Training" data-es="Capacitación SFMC">SFMC Training</h3>
-          <p data-en="Training programs designed to empower your team to get the most out of Salesforce Marketing Cloud." 
-             data-es="Programas de capacitación para empoderar a tu equipo a sacar el máximo provecho de Salesforce Marketing Cloud.">
+          <p data-en="Training programs designed to empower your team to get the most out of Salesforce Marketing Cloud." data-es="Programas de capacitación para empoderar a tu equipo a sacar el máximo provecho de Salesforce Marketing Cloud.">
             Training programs designed to empower your team to get the most out of Salesforce Marketing Cloud.
           </p>
         </div>
@@ -102,7 +96,7 @@
   <section class="marcos-bio">
     <div class="container bio-container">
       <div class="bio-image">
-        <!-- Wrap MFB photo in a link to LinkedIn; add title for hover indication -->
+        <!-- Clicking the MFB photo opens your LinkedIn profile; cursor pointer added via CSS -->
         <a href="https://www.linkedin.com/in/marcosfontanbalestra/" target="_blank">
           <img src="assets/MFB Photo.jpg" alt="Marcos Fontan Balestra" title="Visit my LinkedIn profile" />
         </a>
@@ -251,14 +245,7 @@
 
   <footer>
     <div class="container footer-container">
-      <p>&copy; 2025 Yutori Global. All rights reserved.
-        <span class="follow-us">
-          Follow us: 
-          <a href="https://www.linkedin.com/company/yutori-global/posts/?feedView=all" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </span>
-      </p>
+      <p>&copy; 2025 Yutori Global. All rights reserved.<br class="mobile-only"><span class="follow-us">Follow us: <a href="https://www.linkedin.com/company/yutori-global/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin"></i></a></span></p>
     </div>
   </footer>
 
@@ -266,13 +253,11 @@
   <script>
     const menuToggle = document.querySelector(".menu-toggle");
     const navUl = document.querySelector(".nav-links");
-    const closeBtn = document.querySelector(".nav-close");
-
     menuToggle.addEventListener("click", () => {
       navUl.classList.toggle("active");
     });
     
-    // Close mobile menu when a nav link is clicked
+    // Close the mobile menu when a nav link is clicked
     const navLinks = document.querySelectorAll(".nav-links a");
     navLinks.forEach(link => {
       link.addEventListener("click", () => {
@@ -280,12 +265,12 @@
       });
     });
     
-    // Close mobile menu when the close button is clicked
-    if(closeBtn){
-      closeBtn.addEventListener("click", () => {
+    // Close the mobile menu if user clicks outside the menu area when it's active
+    document.addEventListener("click", function(e) {
+      if (navUl.classList.contains("active") && !navUl.contains(e.target) && !menuToggle.contains(e.target)) {
         navUl.classList.remove("active");
-      });
-    }
+      }
+    });
   </script>
 </body>
 </html>

@@ -145,15 +145,6 @@ html {
       color: #fff;
       text-align: center;
     }
-    /* Mobile close button styling */
-    .nav-close {
-      position: absolute;
-      top: 0.5rem;
-      right: 0.75rem;
-      font-size: 1.8rem;
-      color: #fff;
-      cursor: pointer;
-    }
   }
   
   /* Hero Section */
@@ -172,7 +163,7 @@ html {
   }
   .hero-text.mobile {
     display: none;
-    line-height: 1.1; /* Tighter line-height */
+    line-height: 1.1;
   }
   @media (max-width: 767px) {
     .hero-text.desktop {
@@ -485,10 +476,16 @@ html {
     color: inherit;
     text-decoration: none;
     margin-left: 0.5rem;
-    font-size: 1rem;
+    font-size: 24px; /* Increased size */
   }
   .footer-container .follow-us a:hover {
     color: #f06428;
+  }
+  @media (max-width: 767px) {
+    .footer-container .follow-us {
+      display: block;
+      margin-top: 0.5rem;
+    }
   }
   
   /* Reduce white space between sections on mobile by half */
