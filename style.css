@@ -99,6 +99,7 @@ html {
     color: #f06428;
     text-decoration: underline;
   }
+  
   /* Hamburger Menu */
   .menu-toggle {
     display: none;
@@ -111,19 +112,33 @@ html {
     .menu-toggle {
       display: block;
     }
+    /* Full-screen mobile menu overlay */
     .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
+      position: fixed;
+      top: 0;
       left: 0;
       width: 100%;
-      background: #fff;
-      padding: 1rem 0;
-      border-top: 1px solid #eee;
+      height: 100vh;
+      background: rgba(0,0,0,0.9);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 998;
     }
     .nav-links.active {
-      display: flex;
+      opacity: 1;
+      visibility: visible;
+    }
+    .nav-links li {
+      margin: 1rem 0;
+    }
+    .nav-links a {
+      font-size: 1.5rem;
+      color: #fff;
     }
   }
   
@@ -152,7 +167,6 @@ html {
       display: inline;
       font-size: 2rem;
     }
-    /* Additional break before CTA on mobile */
     .mobile-only {
       display: block;
     }
@@ -217,7 +231,6 @@ html {
     color: #f06428;
     margin-bottom: 1rem;
   }
-  /* Desktop: three-column layout for services */
   @media (min-width: 768px) {
     .service-boxes {
       flex-direction: row;
@@ -274,12 +287,11 @@ html {
     flex-direction: column;
     gap: 1rem;
   }
-  /* Desktop: gap between title and CSAT increased to 1.8cm */
   .cert-header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.8cm;
+    gap: 1.8cm; /* 1.8cm gap on desktop */
     margin-bottom: 0.5rem;
   }
   .cert-header h2 {
@@ -296,7 +308,6 @@ html {
     margin-left: 0.3rem;
     color: #f06428;
   }
-  /* Certifications images as cards */
   .cert-images {
     display: flex;
     flex-wrap: wrap;
@@ -308,7 +319,6 @@ html {
     object-fit: contain;
     flex: 1 1 100px;
   }
-  /* Mobile: grid layout with 2 columns for certifications */
   @media (max-width: 767px) {
     .cert-images {
       display: grid;
@@ -369,7 +379,7 @@ html {
     }
   }
   
-  /* About Section (Styled as cards, three columns on desktop) */
+  /* About Section (Cards styled, three columns on desktop) */
   .about {
     background: #f5f5f5;
     padding: 4rem 0;
