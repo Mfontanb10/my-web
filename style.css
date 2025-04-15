@@ -161,6 +161,7 @@ html {
   .hero p {
     font-size: 1.2rem;
   }
+  /* Mobile hero tagline: add a break to tighten spacing */
   .hero-text.mobile {
     display: none;
     line-height: 1.1;
@@ -476,12 +477,16 @@ html {
     color: inherit;
     text-decoration: none;
     margin-left: 0.5rem;
-    font-size: 24px; /* Increased size */
+    font-size: 24px; /* Increased LinkedIn icon size */
   }
   .footer-container .follow-us a:hover {
     color: #f06428;
   }
   @media (max-width: 767px) {
+    /* On mobile, ensure an extra break between rights and Follow us */
+    .footer-container p {
+      text-align: center;
+    }
     .footer-container .follow-us {
       display: block;
       margin-top: 0.5rem;
