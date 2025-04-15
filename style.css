@@ -73,6 +73,7 @@ html {
   .logo {
     height: 150px;
     width: 150px;
+    cursor: pointer;
   }
   @media (max-width: 767px) {
     .logo {
@@ -100,7 +101,7 @@ html {
     text-decoration: underline;
   }
   
-  /* Hamburger Menu */
+  /* Hamburger Menu and Mobile Overlay */
   .menu-toggle {
     display: none;
     background: none;
@@ -112,18 +113,21 @@ html {
     .menu-toggle {
       display: block;
     }
-    /* Full-screen mobile menu overlay */
+    /* Mobile overlay as a centered, smaller pop-up */
     .nav-links {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      max-width: 300px;
       background: rgba(0,0,0,0.9);
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 1.5rem;
+      padding: 1rem;
+      border-radius: 8px;
       transition: opacity 0.3s ease, visibility 0.3s ease;
       opacity: 0;
       visibility: hidden;
@@ -134,11 +138,21 @@ html {
       visibility: visible;
     }
     .nav-links li {
-      margin: 1rem 0;
+      margin: 0;
     }
     .nav-links a {
       font-size: 1.5rem;
       color: #fff;
+      text-align: center;
+    }
+    /* Mobile close button styling */
+    .nav-close {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.75rem;
+      font-size: 1.8rem;
+      color: #fff;
+      cursor: pointer;
     }
   }
   
@@ -158,6 +172,7 @@ html {
   }
   .hero-text.mobile {
     display: none;
+    line-height: 1.1; /* Tighter line-height */
   }
   @media (max-width: 767px) {
     .hero-text.desktop {
@@ -291,7 +306,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.8cm; /* 1.8cm gap on desktop */
+    gap: 1.8cm;
     margin-bottom: 0.5rem;
   }
   .cert-header h2 {
@@ -462,6 +477,18 @@ html {
     padding: 2rem 0;
     font-size: 0.9rem;
     color: #777;
+  }
+  .footer-container .follow-us {
+    margin-left: 1rem;
+  }
+  .footer-container .follow-us a {
+    color: inherit;
+    text-decoration: none;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+  }
+  .footer-container .follow-us a:hover {
+    color: #f06428;
   }
   
   /* Reduce white space between sections on mobile by half */

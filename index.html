@@ -13,8 +13,13 @@
 <body>
   <header>
     <div class="container header-container">
-      <img src="assets/Yutori-Global-Logo.png" alt="Yutori Global Logo" class="logo" />
+      <!-- Wrap logo so that clicking takes user to Home -->
+      <a href="#home">
+        <img src="assets/Yutori-Global-Logo.png" alt="Yutori Global Logo" class="logo" />
+      </a>
       <nav class="nav">
+        <!-- Mobile close button for menu overlay; visible only on mobile -->
+        <span class="nav-close">&times;</span>
         <ul class="nav-links">
           <li><a href="#home" data-en="Home" data-es="Inicio">Home</a></li>
           <li><a href="#services" data-en="Services" data-es="Servicios">Services</a></li>
@@ -43,7 +48,7 @@
         <span class="hero-text desktop">
           Smarter Marketing Journeys with <span class="highlight" data-en="Salesforce Marketing Cloud" data-es="Salesforce Marketing Cloud">Salesforce Marketing Cloud</span>
         </span>
-        <!-- Mobile tagline -->
+        <!-- Mobile tagline with adjusted line-height -->
         <span class="hero-text mobile">
           Smarter Experiences with SFMC
         </span>
@@ -53,7 +58,7 @@
       </p>
       <!-- Mobile break for CTA -->
       <br class="mobile-only">
-      <!-- "Let's Talk" now scrolls to Contact section -->
+      <!-- "Let's Talk" scrolls to Contact -->
       <a href="#contact" class="cta-btn" data-en="Let’s Talk" data-es="Hablemos">
         Let’s Talk
       </a>
@@ -97,7 +102,10 @@
   <section class="marcos-bio">
     <div class="container bio-container">
       <div class="bio-image">
-        <img src="assets/MFB Photo.jpg" alt="Marcos Fontan Balestra" />
+        <!-- Wrap MFB photo in a link to LinkedIn; add title for hover indication -->
+        <a href="https://www.linkedin.com/in/marcosfontanbalestra/" target="_blank">
+          <img src="assets/MFB Photo.jpg" alt="Marcos Fontan Balestra" title="Visit my LinkedIn profile" />
+        </a>
       </div>
       <div class="bio-text">
         <h2 data-en="Meet Marcos" data-es="Conoce a Marcos">Meet Marcos</h2>
@@ -114,7 +122,7 @@
     </div>
   </section>
 
-  <!-- ABOUT SECTION (Three card topics) -->
+  <!-- ABOUT SECTION (Three cards) -->
   <section id="about" class="about">
     <div class="container">
       <h2 data-en="About Yutori Global" data-es="Sobre Yutori Global">About Yutori Global</h2>
@@ -243,7 +251,14 @@
 
   <footer>
     <div class="container footer-container">
-      <p>&copy; 2025 Yutori Global. All rights reserved.</p>
+      <p>&copy; 2025 Yutori Global. All rights reserved.
+        <span class="follow-us">
+          Follow us: 
+          <a href="https://www.linkedin.com/company/yutori-global/posts/?feedView=all" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </span>
+      </p>
     </div>
   </footer>
 
@@ -251,17 +266,26 @@
   <script>
     const menuToggle = document.querySelector(".menu-toggle");
     const navUl = document.querySelector(".nav-links");
+    const closeBtn = document.querySelector(".nav-close");
+
     menuToggle.addEventListener("click", () => {
       navUl.classList.toggle("active");
     });
     
-    // Close the mobile menu when a nav link is clicked
+    // Close mobile menu when a nav link is clicked
     const navLinks = document.querySelectorAll(".nav-links a");
     navLinks.forEach(link => {
       link.addEventListener("click", () => {
         navUl.classList.remove("active");
       });
     });
+    
+    // Close mobile menu when the close button is clicked
+    if(closeBtn){
+      closeBtn.addEventListener("click", () => {
+        navUl.classList.remove("active");
+      });
+    }
   </script>
 </body>
 </html>
