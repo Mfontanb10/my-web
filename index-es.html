@@ -44,11 +44,11 @@
       <h1>
         <!-- Versión de escritorio -->
         <span class="hero-text desktop">
-          Marketing Journeys Más Inteligentes con <span class="highlight">Salesforce Marketing Cloud</span>
+          Marketing inteligente con <span class="highlight">Salesforce Marketing Cloud</span>
         </span>
-        <!-- Versión móvil con frase en dos líneas -->
+        <!-- Versión móvil -->
         <span class="hero-text mobile">
-          Experiencias más inteligentes<br class="mobile-break">con Salesforce Marketing Cloud
+          Marketing inteligente con<br class="mobile-break">Salesforce Marketing Cloud
         </span>
       </h1>
       <p>
@@ -93,7 +93,7 @@
   <section class="marcos-bio">
     <div class="container bio-container">
       <div class="bio-image">
-        <!-- Foto de MFB con enlace a LinkedIn -->
+        <!-- Foto de MFB enlazada a LinkedIn -->
         <a href="https://www.linkedin.com/in/marcosfontanbalestra/" target="_blank">
           <img src="assets/MFB Photo.jpg" alt="Marcos Fontan Balestra" title="Visita mi perfil de LinkedIn" />
         </a>
@@ -165,11 +165,11 @@
     <div class="container">
       <h2>+50 Proyectos Realizados</h2>
       <p>
-        Nuestro equipo cuenta con un historial comprobado de contribuciones en proyectos para algunas de las marcas más grandes del mundo, demostrando experiencia y calidad excepcionales.
+        Hemos colaborado con algunas de las marcas más grandes del mundo, ofreciendo experiencia de primer nivel en cada proyecto.
       </p>
       <div class="logo-marquee">
         <div class="logo-track">
-          <!-- Original Logos -->
+          <!-- Logos (duplicados para efecto de scrolling) -->
           <img src="assets/AltraLogoImage.png" alt="Altra Logo" />
           <img src="assets/ChanelLogoImage.png" alt="Chanel Logo" />
           <img src="assets/DickiesLogoImage.png" alt="Dickies Logo" />
@@ -180,13 +180,11 @@
           <img src="assets/NetshoesLogoImage.png" alt="Netshoes Logo" />
           <img src="assets/OmronLogoImage.png" alt="Omron Logo" />
           <img src="assets/SmartwoolLogoImage.png" alt="Smartwool Logo" />
-          <!-- Additional Logos -->
           <img src="assets/TheNorthFaceLogoImage.png" alt="The North Face Logo" />
           <img src="assets/TimberlandLogoImage.png" alt="Timberland Logo" />
           <img src="assets/TomTomLogoImage.png" alt="TomTom Logo" />
           <img src="assets/VansLogoImage.png" alt="Vans Logo" />
           <img src="assets/WhirlpoolLogoImage.png" alt="Whirlpool Logo" />
-          <!-- Duplicate for continuous loop -->
           <img src="assets/AltraLogoImage.png" alt="Altra Logo" />
           <img src="assets/ChanelLogoImage.png" alt="Chanel Logo" />
           <img src="assets/DickiesLogoImage.png" alt="Dickies Logo" />
@@ -207,7 +205,7 @@
     </div>
   </section>
 
-  <!-- SECCIÓN DE CONTACTO CON FORMSPREE -->
+  <!-- SECCIÓN DE CONTACTO (Formspree) -->
   <section id="contact" class="contact">
     <div class="container">
       <h2>Contáctanos</h2>
@@ -252,7 +250,7 @@
       navUl.classList.toggle("active");
     });
     
-    // Cierra el menú al hacer clic en un enlace
+    // Cierra el menú móvil al hacer clic en un enlace
     const navLinks = document.querySelectorAll(".nav-links a");
     navLinks.forEach(link => {
       link.addEventListener("click", () => {
@@ -260,7 +258,7 @@
       });
     });
     
-    // Cierra el menú si se hace clic fuera del pop-up
+    // Cierra el menú móvil si se hace clic fuera del pop-up
     document.addEventListener("click", function(e) {
       if (navUl.classList.contains("active") && !navUl.contains(e.target) && !menuToggle.contains(e.target)) {
         navUl.classList.remove("active");
