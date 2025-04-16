@@ -13,26 +13,26 @@
 <body>
   <header>
     <div class="container header-container">
-      <!-- Logo clickable: scroll to home -->
+      <!-- Logo clickeable que lleva al inicio -->
       <a href="#home">
         <img src="assets/Yutori-Global-Logo.png" alt="Yutori Global Logo" class="logo" />
       </a>
       <nav class="nav">
         <ul class="nav-links">
-          <li><a href="#home" data-en="Home" data-es="Inicio">Inicio</a></li>
-          <li><a href="#services" data-en="Services" data-es="Servicios">Servicios</a></li>
-          <li><a href="#about" data-en="About" data-es="Acerca de">Acerca de</a></li>
-          <li><a href="#contact" data-en="Contact" data-es="Contacto">Contacto</a></li>
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#services">Servicios</a></li>
+          <li><a href="#about">Acerca de</a></li>
+          <li><a href="#contact">Contacto</a></li>
         </ul>
       </nav>
-      <!-- Hamburger Menu Toggle (visible en móvil) -->
+      <!-- Botón de hamburguesa (visible en móvil) -->
       <button class="menu-toggle"><i class="fas fa-bars"></i></button>
       <!-- Language Dropdown -->
       <div class="language-dropdown">
         <button class="dropdown-toggle">ES</button>
         <div class="dropdown-menu">
-          <a href="index.html" data-lang="en">Inglés</a>
-          <a href="index-es.html" data-lang="es">Español</a>
+          <a href="index.html">Inglés</a>
+          <a href="index-es.html">Español</a>
         </div>
       </div>
     </div>
@@ -42,52 +42,46 @@
   <section id="home" class="hero">
     <div class="container">
       <h1>
-        <!-- Etiqueta de escritorio -->
+        <!-- Versión de escritorio -->
         <span class="hero-text desktop">
-          Marketing Journeys Más Inteligentes con <span class="highlight" data-en="Salesforce Marketing Cloud" data-es="Salesforce Marketing Cloud">Salesforce Marketing Cloud</span>
+          Marketing Journeys Más Inteligentes con <span class="highlight">Salesforce Marketing Cloud</span>
         </span>
-        <!-- Etiqueta móvil con un salto de línea reducido entre "Experiencias más inteligentes" y "con SFMC" -->
+        <!-- Versión móvil con frase en dos líneas -->
         <span class="hero-text mobile">
-          Experiencias más inteligentes<br class="mobile-break">con SFMC
+          Experiencias más inteligentes<br class="mobile-break">con Salesforce Marketing Cloud
         </span>
       </h1>
-      <p data-en="From strategy to execution, we help you unlock SFMC's full potential." data-es="Desde la estrategia hasta la ejecución, te ayudamos a desbloquear todo el potencial de SFMC.">
+      <p>
         Desde la estrategia hasta la ejecución, te ayudamos a desbloquear todo el potencial de SFMC.
       </p>
       <br class="mobile-only">
-      <!-- CTA "Hablemos" que redirige a la sección de contacto -->
-      <a href="#contact" class="cta-btn" data-en="Let’s Talk" data-es="Hablemos">
-        Hablemos
-      </a>
+      <a href="#contact" class="cta-btn">Hablemos</a>
     </div>
   </section>
 
-  <!-- SECCIÓN DE SERVICIOS (Tres tarjetas: Consultoría SFMC, Implementación Práctica y Capacitación SFMC) -->
+  <!-- SECCIÓN DE SERVICIOS (Tres tarjetas) -->
   <section id="services" class="services">
     <div class="container">
-      <h2 class="big-title" data-en="Our Services" data-es="Nuestros Servicios">Nuestros Servicios</h2>
+      <h2 class="big-title">Nuestros Servicios</h2>
       <div class="service-boxes">
         <div class="service">
           <i class="fas fa-lightbulb service-icon"></i>
-          <h3 data-en="SFMC Consulting" data-es="Consultoría SFMC">Consultoría SFMC</h3>
-          <p data-en="Strategic advice on implementation, product selection, integrations, and customer journey design." 
-             data-es="Asesoría estratégica en implementación, selección de productos, integraciones y diseño de recorridos del cliente.">
+          <h3>Consultoría SFMC</h3>
+          <p>
             Asesoría estratégica en implementación, selección de productos, integraciones y diseño de recorridos del cliente.
           </p>
         </div>
         <div class="service">
           <i class="fas fa-tools service-icon"></i>
-          <h3 data-en="Hands-on Implementation" data-es="Implementación Práctica">Implementación Práctica</h3>
-          <p data-en="Journey building, email development, AMPscript, data modeling, and marketing automation setup." 
-             data-es="Construcción de recorridos, desarrollo de correos electrónicos, AMPscript, modelado de datos y configuración de automatización de marketing.">
+          <h3>Implementación Práctica</h3>
+          <p>
             Construcción de recorridos, desarrollo de correos electrónicos, AMPscript, modelado de datos y configuración de automatización de marketing.
           </p>
         </div>
         <div class="service">
           <i class="fas fa-chalkboard-teacher service-icon"></i>
-          <h3 data-en="SFMC Training" data-es="Capacitación SFMC">Capacitación SFMC</h3>
-          <p data-en="Training programs designed to empower your team to get the most out of Salesforce Marketing Cloud." 
-             data-es="Programas de capacitación diseñados para empoderar a tu equipo a sacar el máximo provecho de Salesforce Marketing Cloud.">
+          <h3>Capacitación SFMC</h3>
+          <p>
             Programas de capacitación diseñados para empoderar a tu equipo a sacar el máximo provecho de Salesforce Marketing Cloud.
           </p>
         </div>
@@ -99,21 +93,21 @@
   <section class="marcos-bio">
     <div class="container bio-container">
       <div class="bio-image">
-        <!-- La foto de MFB se enlaza a su perfil de LinkedIn -->
+        <!-- Foto de MFB con enlace a LinkedIn -->
         <a href="https://www.linkedin.com/in/marcosfontanbalestra/" target="_blank">
-          <img src="assets/MFB Photo.jpg" alt="Marcos Fontan Balestra" title="Visita mi perfil en LinkedIn" />
+          <img src="assets/MFB Photo.jpg" alt="Marcos Fontan Balestra" title="Visita mi perfil de LinkedIn" />
         </a>
       </div>
       <div class="bio-text">
-        <h2 data-en="Meet Marcos" data-es="Conoce a Marcos">Conoce a Marcos</h2>
+        <h2>Conoce a Marcos</h2>
         <p>
-          Marcos es un experto en Martech con más de 8 años de experiencia liderando estrategias de CRM y marketing de ciclo de vida tanto en entornos B2C como B2B. Se especializa en Salesforce Marketing Cloud, ofreciendo experiencias omnicanal basadas en datos que impulsan el crecimiento real de los negocios.
+          Marcos es un experto en Martech con más de 8 años de experiencia liderando estrategias de CRM y marketing de ciclo de vida tanto en entornos B2C como B2B. Se especializa en Salesforce Marketing Cloud, ofreciendo experiencias omnicanal basadas en datos que impulsan el crecimiento real del negocio.
         </p>
         <p>
-          Con una combinación única de conocimientos técnicos y un enfoque estratégico basado en datos, Marcos ha liderado exitosamente iniciativas en personalización impulsada por IA, migraciones de plataformas de e-commerce e implementaciones de campañas multicanal, incluyendo Email, SMS y notificaciones push.
+          Con una combinación única de conocimientos técnicos y un enfoque estratégico basado en datos, Marcos ha liderado con éxito iniciativas de personalización impulsadas por IA, migraciones de plataformas de e-commerce e implementaciones de campañas multicanal, incluyendo Email, SMS y notificaciones push.
         </p>
         <p>
-          Marcos se destaca en la intersección del marketing, la tecnología y la experiencia del cliente, transformando desafíos complejos en oportunidades de alto impacto mediante la innovación, la colaboración y una mentalidad orientada al rendimiento.
+          Marcos sobresale en la intersección del marketing, la tecnología y la experiencia del cliente, transformando desafíos complejos en oportunidades de alto impacto mediante la innovación, la colaboración y un pensamiento orientado al rendimiento.
         </p>
       </div>
     </div>
@@ -122,26 +116,23 @@
   <!-- SECCIÓN SOBRE YUTORI (Tres tarjetas) -->
   <section id="about" class="about">
     <div class="container">
-      <h2 data-en="About Yutori Global" data-es="Sobre Yutori Global">Sobre Yutori Global</h2>
+      <h2>Sobre Yutori Global</h2>
       <div class="about-grid">
         <div class="about-block">
-          <h3 data-en="Strategy to Execution" data-es="Estrategia a Ejecución">Estrategia a Ejecución</h3>
-          <p data-en="Yutori Global provides expert Salesforce Marketing Cloud solutions, guiding businesses from strategy to execution with flexibility and precision." 
-             data-es="Yutori Global proporciona soluciones expertas en Salesforce Marketing Cloud, guiando a las empresas desde la estrategia hasta la ejecución con flexibilidad y precisión.">
+          <h3>Estrategia a Ejecución</h3>
+          <p>
             Yutori Global proporciona soluciones expertas en Salesforce Marketing Cloud, guiando a las empresas desde la estrategia hasta la ejecución con flexibilidad y precisión.
           </p>
         </div>
         <div class="about-block">
-          <h3 data-en="Hands-on Experience" data-es="Experiencia Práctica">Experiencia Práctica</h3>
-          <p data-en="Backed by several years of hands-on experience in both retail and consultancy sectors, our team deeply understands how to design and implement marketing strategies that drive real revenue impact." 
-             data-es="Respaldados por varios años de experiencia práctica en sectores minoristas y de consultoría, nuestro equipo entiende profundamente cómo diseñar e implementar estrategias de marketing que generen un impacto real.">
+          <h3>Experiencia Práctica</h3>
+          <p>
             Respaldados por varios años de experiencia práctica en sectores minoristas y de consultoría, nuestro equipo entiende profundamente cómo diseñar e implementar estrategias de marketing que generen un impacto real.
           </p>
         </div>
         <div class="about-block">
-          <h3 data-en="Results-Driven Approach" data-es="Enfoque Orientado a Resultados">Enfoque Orientado a Resultados</h3>
-          <p data-en="We help you unlock the full potential of SFMC to create smarter, more effective customer journeys that truly drive measurable growth." 
-             data-es="Te ayudamos a desbloquear todo el potencial de SFMC para crear recorridos de clientes más inteligentes y efectivos que realmente impulsen un crecimiento medible.">
+          <h3>Enfoque Orientado a Resultados</h3>
+          <p>
             Te ayudamos a desbloquear todo el potencial de SFMC para crear recorridos de clientes más inteligentes y efectivos que realmente impulsen un crecimiento medible.
           </p>
         </div>
@@ -153,11 +144,9 @@
   <section class="certifications">
     <div class="container certs-container">
       <div class="cert-header">
-        <h2 data-en="100% Salesforce Certified Team" data-es="Equipo 100% Certificado por Salesforce">
-          Equipo 100% Certificado por Salesforce
-        </h2>
+        <h2>Equipo 100% Certificado por Salesforce</h2>
         <div class="csat">
-          <span data-en="CSAT 4.9" data-es="CSAT 4.9">CSAT 4.9</span>
+          <span>CSAT 4.9</span>
           <span class="stars">★★★★★</span>
         </div>
       </div>
@@ -171,12 +160,11 @@
     </div>
   </section>
 
-  <!-- SECCIÓN DE PROYECTOS (CAROUSEL) -->
+  <!-- SECCIÓN DE PROYECTOS -->
   <section class="projects">
     <div class="container">
-      <h2 data-en="+50 Projects Delivered" data-es="+50 Proyectos Realizados">+50 Proyectos Realizados</h2>
-      <p data-en="Our team has a proven track record of contributing to projects for some of the world's biggest brands, demonstrating exceptional expertise and quality." 
-         data-es="Nuestro equipo cuenta con un historial comprobado de contribuciones en proyectos para algunas de las marcas más grandes del mundo, demostrando experiencia y calidad excepcionales.">
+      <h2>+50 Proyectos Realizados</h2>
+      <p>
         Nuestro equipo cuenta con un historial comprobado de contribuciones en proyectos para algunas de las marcas más grandes del mundo, demostrando experiencia y calidad excepcionales.
       </p>
       <div class="logo-marquee">
@@ -192,7 +180,7 @@
           <img src="assets/NetshoesLogoImage.png" alt="Netshoes Logo" />
           <img src="assets/OmronLogoImage.png" alt="Omron Logo" />
           <img src="assets/SmartwoolLogoImage.png" alt="Smartwool Logo" />
-          <!-- New Logos -->
+          <!-- Additional Logos -->
           <img src="assets/TheNorthFaceLogoImage.png" alt="The North Face Logo" />
           <img src="assets/TimberlandLogoImage.png" alt="Timberland Logo" />
           <img src="assets/TomTomLogoImage.png" alt="TomTom Logo" />
@@ -222,7 +210,7 @@
   <!-- SECCIÓN DE CONTACTO CON FORMSPREE -->
   <section id="contact" class="contact">
     <div class="container">
-      <h2 data-en="Contact Us" data-es="Contáctanos">Contáctanos</h2>
+      <h2>Contáctanos</h2>
       <form action="https://formspree.io/f/xgvadqjg" method="POST" class="contact-form">
         <div class="form-group">
           <input type="text" name="first_name" placeholder="Nombre" required>
@@ -246,7 +234,13 @@
 
   <footer>
     <div class="container footer-container">
-      <p>&copy; 2025 Yutori Global. Todos los derechos reservados.<br class="mobile-only"><br class="mobile-only"><span class="follow-us">Síguenos: <a href="https://www.linkedin.com/company/yutori-global/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin"></i></a></span></p>
+      <p>&copy; 2025 Yutori Global. Todos los derechos reservados.<br class="mobile-only"><br class="mobile-only">
+        <span class="follow-us">Síguenos:
+          <a href="https://www.linkedin.com/company/yutori-global/posts/?feedView=all" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </span>
+      </p>
     </div>
   </footer>
 
@@ -258,7 +252,7 @@
       navUl.classList.toggle("active");
     });
     
-    // Cierra el menú móvil al hacer clic en cualquier enlace
+    // Cierra el menú al hacer clic en un enlace
     const navLinks = document.querySelectorAll(".nav-links a");
     navLinks.forEach(link => {
       link.addEventListener("click", () => {
@@ -266,7 +260,7 @@
       });
     });
     
-    // Cierra el menú móvil si se hace clic fuera del área del menú cuando está activo
+    // Cierra el menú si se hace clic fuera del pop-up
     document.addEventListener("click", function(e) {
       if (navUl.classList.contains("active") && !navUl.contains(e.target) && !menuToggle.contains(e.target)) {
         navUl.classList.remove("active");
