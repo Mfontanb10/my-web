@@ -54,7 +54,7 @@ html {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    /* Reduced spacing between sections (2rem desktop) */
+    /* Reduced spacing between sections: 2rem desktop */
     padding: 2rem 0;
   }
   
@@ -152,7 +152,7 @@ html {
   .hero {
     background: linear-gradient(135deg, #f06428, #ffa06d);
     color: #fff;
-    /* Reduced padding from 4rem to 2rem on desktop */
+    /* Reduced padding from 4rem to 2rem for desktop */
     padding: 2rem 0;
     text-align: center;
   }
@@ -163,16 +163,16 @@ html {
   .hero p {
     font-size: 1.2rem;
   }
-  /* Mobile Hero Tagline: Tighter line-height and minimal break */
+  /* Mobile Hero Tagline: Adjusted to force a single break */
   .hero-text.mobile {
     display: none;
-    font-size: 2rem;
-    line-height: 1; /* Reduced line-height */
+    font-size: 1.8rem;  /* Reduced font size */
+    line-height: 1;     /* Tighter line spacing */
   }
   .mobile-break {
     display: block;
     margin: 0;
-    line-height: 0.8; /* Further reduce gap */
+    line-height: 0.8;  /* Minimal extra gap */
   }
   @media (max-width: 767px) {
     .hero-text.desktop {
@@ -201,18 +201,17 @@ html {
   }
   
   /* Sections: Services, Marcos Bio, Certifications, Projects, About, Contact */
-  /* Reduced spacing on desktop to 2rem */
   .services,
   .marcos-bio,
   .certifications,
   .projects,
   .about,
   .contact {
-    padding: 2rem 0;
+    padding: 2rem 0;  /* Reduced spacing on desktop */
     text-align: center;
   }
   
-  /* Mobile: Further reduce spacing (to 1rem) */
+  /* On mobile, further reduce the spacing between sections */
   @media (max-width: 767px) {
     .services,
     .marcos-bio,
@@ -224,7 +223,7 @@ html {
     }
   }
   
-  /* Service Section */
+  /* Services Section */
   .service-boxes {
     display: flex;
     flex-direction: column;
