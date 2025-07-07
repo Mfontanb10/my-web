@@ -1,3 +1,4 @@
+<!-- index-es.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,7 +14,6 @@
 <body>
   <header>
     <div class="container header-container">
-      <!-- Logo clickeable que lleva al inicio -->
       <a href="#home">
         <img src="assets/Yutori-Global-Logo.png" alt="Yutori Global Logo" class="logo" />
       </a>
@@ -25,9 +25,7 @@
           <li><a href="#contact">Contacto</a></li>
         </ul>
       </nav>
-      <!-- Botón de hamburguesa (visible en móvil) -->
       <button class="menu-toggle"><i class="fas fa-bars"></i></button>
-      <!-- Language Dropdown -->
       <div class="language-dropdown">
         <button class="dropdown-toggle">ES</button>
         <div class="dropdown-menu">
@@ -42,11 +40,9 @@
   <section id="home" class="hero">
     <div class="container">
       <h1>
-        <!-- Versión de escritorio -->
         <span class="hero-text desktop">
           Marketing inteligente con <span class="highlight">Salesforce Marketing Cloud</span>
         </span>
-        <!-- Versión móvil -->
         <span class="hero-text mobile">
           Marketing inteligente con<br class="mobile-break">Salesforce Marketing Cloud
         </span>
@@ -59,7 +55,7 @@
     </div>
   </section>
 
-  <!-- SECCIÓN DE SERVICIOS (Tres tarjetas) -->
+  <!-- SECCIÓN DE SERVICIOS -->
   <section id="services" class="services">
     <div class="container">
       <h2 class="big-title">Nuestros Servicios</h2>
@@ -89,31 +85,7 @@
     </div>
   </section>
 
-  <!-- SECCIÓN BIO (Conoce a Marcos) -->
-  <section class="marcos-bio">
-    <div class="container bio-container">
-      <div class="bio-image">
-        <!-- Foto de MFB enlazada a LinkedIn -->
-        <a href="https://www.linkedin.com/in/marcosfontanbalestra/" target="_blank">
-          <img src="assets/MFB Photo.jpg" alt="Marcos Fontan Balestra" title="Visita mi perfil de LinkedIn" />
-        </a>
-      </div>
-      <div class="bio-text">
-        <h2>Conoce a Marcos</h2>
-        <p>
-          Marcos es un experto en Martech con más de 8 años de experiencia liderando estrategias de CRM y marketing de ciclo de vida tanto en entornos B2C como B2B. Se especializa en Salesforce Marketing Cloud, ofreciendo experiencias omnicanal basadas en datos que impulsan el crecimiento real del negocio.
-        </p>
-        <p>
-          Con una combinación única de conocimientos técnicos y un enfoque estratégico basado en datos, Marcos ha liderado con éxito iniciativas de personalización impulsadas por IA, migraciones de plataformas de e-commerce e implementaciones de campañas multicanal, incluyendo Email, SMS y notificaciones push.
-        </p>
-        <p>
-          Marcos sobresale en la intersección del marketing, la tecnología y la experiencia del cliente, transformando desafíos complejos en oportunidades de alto impacto mediante la innovación, la colaboración y un pensamiento orientado al rendimiento.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECCIÓN SOBRE YUTORI (Tres tarjetas) -->
+  <!-- SECCIÓN SOBRE YUTORI -->
   <section id="about" class="about">
     <div class="container">
       <h2>Sobre Yutori Global</h2>
@@ -140,26 +112,6 @@
     </div>
   </section>
 
-  <!-- SECCIÓN DE CERTIFICACIONES -->
-  <section class="certifications">
-    <div class="container certs-container">
-      <div class="cert-header">
-        <h2>Equipo 100% Certificado por Salesforce</h2>
-        <div class="csat">
-          <span>CSAT 4.9</span>
-          <span class="stars">★★★★★</span>
-        </div>
-      </div>
-      <div class="cert-images">
-        <img src="assets/SFMC Email Specialist.png" alt="Email Specialist" />
-        <img src="assets/SFMC Consultant.png" alt="Consultant" />
-        <img src="assets/SFMC Administrator.png" alt="Administrator" />
-        <img src="assets/SFMC Developer.png" alt="Developer" />
-        <img src="assets/SFMC Pardot Specialist.png" alt="Pardot Specialist" />
-      </div>
-    </div>
-  </section>
-
   <!-- SECCIÓN DE PROYECTOS -->
   <section class="projects">
     <div class="container">
@@ -169,7 +121,7 @@
       </p>
       <div class="logo-marquee">
         <div class="logo-track">
-          <!-- Logos (duplicados para efecto de scrolling) -->
+          <!-- Logos repetidos para el carrusel -->
           <img src="assets/AltraLogoImage.png" alt="Altra Logo" />
           <img src="assets/ChanelLogoImage.png" alt="Chanel Logo" />
           <img src="assets/DickiesLogoImage.png" alt="Dickies Logo" />
@@ -185,6 +137,7 @@
           <img src="assets/TomTomLogoImage.png" alt="TomTom Logo" />
           <img src="assets/VansLogoImage.png" alt="Vans Logo" />
           <img src="assets/WhirlpoolLogoImage.png" alt="Whirlpool Logo" />
+          <!-- Duplicados para bucle infinito -->
           <img src="assets/AltraLogoImage.png" alt="Altra Logo" />
           <img src="assets/ChanelLogoImage.png" alt="Chanel Logo" />
           <img src="assets/DickiesLogoImage.png" alt="Dickies Logo" />
@@ -205,7 +158,7 @@
     </div>
   </section>
 
-  <!-- SECCIÓN DE CONTACTO (Formspree) -->
+  <!-- SECCIÓN DE CONTACTO -->
   <section id="contact" class="contact">
     <div class="container">
       <h2>Contáctanos</h2>
@@ -249,16 +202,12 @@
     menuToggle.addEventListener("click", () => {
       navUl.classList.toggle("active");
     });
-    
-    // Cierra el menú móvil al hacer clic en un enlace
     const navLinks = document.querySelectorAll(".nav-links a");
     navLinks.forEach(link => {
       link.addEventListener("click", () => {
         navUl.classList.remove("active");
       });
     });
-    
-    // Cierra el menú móvil si se hace clic fuera del pop-up
     document.addEventListener("click", function(e) {
       if (navUl.classList.contains("active") && !navUl.contains(e.target) && !menuToggle.contains(e.target)) {
         navUl.classList.remove("active");
