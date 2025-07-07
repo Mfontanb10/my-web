@@ -199,7 +199,7 @@ header {
     color: #fff;
 }
 
-/* Sections: services, projects, about, contact */
+/* Sections */
 .services,
 .projects,
 .about,
@@ -263,10 +263,6 @@ header {
 }
 
 /* Projects Section */
-.projects {
-    background: #fff;
-    text-align: center;
-}
 .projects h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -404,5 +400,3 @@ footer {
         margin-top: 0.5rem;
     }
 }
-
-/* End of CSS */
